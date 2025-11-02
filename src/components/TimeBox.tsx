@@ -24,7 +24,7 @@ export function TimeBox({ activity, timeFrame, current, previous }: TimeBoxProps
   return (
     <article
       style={{ backgroundColor: activityColor[activity] }}
-      className="relative w-81.75 rounded-2xl pt-9.5"
+      className="relative w-81.75 rounded-2xl pt-9.5 overflow-hidden"
     >
       <img src={`/images/icon-${activity}.svg`} className="absolute -top-1 right-3" />
       <div className="translate-y-px rounded-2xl bg-[#1C204B] px-6 py-7">
