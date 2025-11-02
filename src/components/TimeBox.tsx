@@ -14,6 +14,12 @@ export function TimeBox({ activity, timeFrame, current, previous }: TimeBoxProps
     Social: "#7335D2",
     "Self Care": "#F1C75B",
   };
+  
+  const tfText = {
+    daily: "Yesterday",
+    weekly: "Last Week",
+    monthly: "Last Month"
+  }
 
   return (
     <article
@@ -32,7 +38,7 @@ export function TimeBox({ activity, timeFrame, current, previous }: TimeBoxProps
         </div>
         <div className="flex items-center justify-between">
           <p className="text-[2rem] leading-9.5 font-light text-white">{current}hrs</p>
-          <p className="text-[0.9375rem] text-[#BBC0FF]">Last {timeFrame} - {previous}hrs</p>
+          <p className="text-[0.9375rem] text-[#BBC0FF]">{tfText[timeFrame]} - {previous}hrs</p>
         </div>
       </div>
     </article>
