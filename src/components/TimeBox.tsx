@@ -1,14 +1,12 @@
-type activityType = "Work" | "Play" | "Study" | "Exercise" | "Social" | "Self Care";
-
 interface TimeBoxProps {
-  activity: activityType;
-  timeFrame: "Day" | "Week" | "Month";
+  activity: string;
+  timeFrame: "daily" | "weekly" | "monthly";
   current: number;
   previous: number;
 }
 
 export function TimeBox({ activity, timeFrame, current, previous }: TimeBoxProps) {
-  const activityColor: Record<activityType, string> = {
+  const activityColor: Record<string, string> = {
     Work: "#FF8B64",
     Play: "#55C2E6",
     Study: "#FF5E7D",
