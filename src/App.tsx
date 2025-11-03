@@ -22,7 +22,7 @@ function App() {
 
   return (
     <main className="mx-auto grid w-fit gap-y-6 py-20 xl:grid-cols-4 xl:gap-7.5 xl:px-8 xl:pt-32">
-      <Profile timeFrame={filter} className="xl:row-start-1 xl:row-end-3" />
+      <Profile timeFrame={filter} className="xl:row-start-1 xl:row-end-3" filterHandler={setFilter}/>
       {items}
     </main>
   );

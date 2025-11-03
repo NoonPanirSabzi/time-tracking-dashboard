@@ -3,8 +3,9 @@ export type TimeFrame = "daily" | "weekly" | "monthly";
 interface ProfileProps {
   timeFrame: TimeFrame;
   className: string;
+  filterHandler: (tf : TimeFrame) => void;
 }
-export function Profile({ timeFrame, className }: ProfileProps) {
+export function Profile({ timeFrame, className, filterHandler }: ProfileProps) {
   return (
     <article
       className={
@@ -30,18 +31,21 @@ export function Profile({ timeFrame, className }: ProfileProps) {
         <button
           type="button"
           className={`cursor-pointer rounded-xl px-3 py-2 hover:bg-[#5747EA] ${timeFrame === "daily" ? "text-white" : "text-[#7078C9] hover:text-[#c2c4db]"}`}
+          onClick={() => filterHandler("daily")}
         >
           Daily
         </button>
         <button
           type="button"
           className={`cursor-pointer rounded-xl px-3 py-2 hover:bg-[#5747EA] ${timeFrame === "weekly" ? "text-white" : "text-[#7078C9] hover:text-[#c2c4db]"}`}
+          onClick={() => filterHandler("weekly")}
         >
           Weekly
         </button>
         <button
           type="button"
           className={`cursor-pointer rounded-xl px-3 py-2 hover:bg-[#5747EA] ${timeFrame === "monthly" ? "text-white" : "text-[#7078C9] hover:text-[#c2c4db]"}`}
+          onClick={() => filterHandler("monthly")}
         >
           Monthly
         </button>
