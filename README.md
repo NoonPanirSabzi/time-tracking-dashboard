@@ -16,9 +16,9 @@
 
 | Desktop                              | Mobile                             |
 | ------------------------------------ | ---------------------------------- |
-| ![desktop](/screenshot/desktop.jpeg) | ![Mobile](/screenshot/mobile.jpeg) |
+| ![desktop](/screenshot/desktop.png) | ![Mobile](/screenshot/mobile.png) |
 
-[Live Site URL](Link)
+[Live Site URL](https://tt-d.netlify.app/)
 
 ## My process
 
