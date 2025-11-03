@@ -1,5 +1,7 @@
+export type TimeFrame = "daily" | "weekly" | "monthly";
+
 interface ProfileProps {
-  timeFrame: "daily" | "weekly" | "monthly";
+  timeFrame: TimeFrame;
 }
 export function Profile({ timeFrame }: ProfileProps) {
   return (
