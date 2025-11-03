@@ -29,14 +29,16 @@ export function TimeBox({
   };
 
   return (
-    <article
-      style={{ backgroundColor: activityColor[activity] }}
-      className="relative max-w-81.75 overflow-hidden rounded-2xl pt-9.5 xl:max-w-3xs xl:pt-11.25"
-    >
-      <img
-        src={`/images/icon-${activity}.svg`}
-        className="absolute -top-1 right-3"
-      />
+    <article className="relative max-w-81.75 overflow-hidden rounded-2xl pt-9.5 xl:max-w-3xs xl:pt-11.25">
+      <div
+        className="absolute top-0 h-1/2 w-full bg-white"
+        style={{ backgroundColor: activityColor[activity] }}
+      >
+        <img
+          src={`/images/icon-${activity}.svg`}
+          className="absolute -top-1 right-3"
+        />
+      </div>
       <div className="translate-y-px rounded-2xl bg-[#1C204B] px-6 py-7 xl:h-full xl:pt-7.25 xl:pr-8.75 xl:pb-8 xl:pl-7.5">
         <div className="mb-1.5 flex items-center justify-between xl:mb-6">
           <p className="text-lg leading-5.25 font-medium text-white">
