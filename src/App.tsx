@@ -6,8 +6,8 @@ import data from "./data.json";
 
 function App() {
   const items: React.ReactElement[] = [];
-  const [filter, setFilter] = useState<TimeFrame>("weekly")
-  
+  const [filter, setFilter] = useState<TimeFrame>("weekly");
+
   data.forEach((node, index) => {
     items.push(
       <TimeBox
@@ -21,8 +21,8 @@ function App() {
   });
 
   return (
-    <main className="grid mx-auto w-fit gap-x-7.5 gap-y-6 py-20">
-      <Profile timeFrame={filter}/>
+    <main className="mx-auto grid w-fit gap-y-6 py-20 xl:grid-cols-4 xl:gap-7.5 xl:px-8 xl:pt-32">
+      <Profile timeFrame={filter} className="xl:row-start-1 xl:row-end-3" />
       {items}
     </main>
   );
